@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Vite App</title>
+  </head>
+  <body>
+    
+    <div class="dashboard">
+      <div class="panel panel--secondary">
+        <h4 class="panel__title">My Credit Card</h4>
+
+        <article class="card">
+          <div class="card__background">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 244 90">
+              <path fill-rule="evenodd" opacity="0.102" fill="rgb(255, 255, 255)" d="M2.999,91.999 C55.518,113.721 102.956,95.682 135.0,57.999 C165.533,22.93 188.641,3.572 243.999,0.0 L243.999,118.999 L0.0,118.999 L2.999,91.999 Z" />
+              <path fill-rule="evenodd" opacity="0.102" fill="rgb(255, 255, 255)" d="M240.999,92.999 C188.481,114.721 141.43,96.682 108.999,58.999 C78.466,23.93 55.358,4.572 0.0,0.999 L0.0,119.999 L243.999,119.999 L240.999,92.999 Z" />
+            </svg>
+          </div>
+
+          <div class="card__logo"><i>Visa</i></div>
+          <figure class="card__number">
+            <span class="block">2450</span>
+            <span class="block">24512</span>
+            <span class="block">25412</span>
+          </figure>
+
+          <div class="card__details">
+            <figure class="card__expiry">12/05</figure>
+            <span class="card__name">Subash</span>
+          </div>
+        </article>
+
+        <hr class="panel__separator" />
+
+        <div class="card-info">
+          <div class="card-info__row">
+            <div class="title">Card Number</div>
+            <div class="value">2450 24512 25412</div>
+          </div>
+          <div class="card-info__row">
+            <div class="title">Account Name</div>
+            <div class="value">John Doe</div>
+          </div>
+          <div class="card-info__row">
+            <div class="title">Cart Status</div>
+            <div class="value">Active</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel panel--primary">
+        <div class="panel__header">
+          <h4 class="panel__title">Statistics</h4>
+
+          <select id="statistics_year" class="dropdown js-statistics-year"></select>
+          <select id="statistics_month" class="dropdown js-statistics-month"></select>
+        </div>
+
+        <canvas class="statisics-chart js-statistics-chart"></canvas>
+      </div>
+
+      
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

@@ -1,0 +1,232 @@
+html {
+  font-family: Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+html,
+body {
+  background-color: #fbfbfb;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+  line-height: 100%;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 1.25rem;
+
+  .panel {
+    margin-left: 1.25rem;
+
+    &:last-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  @media (max-width: 780px) {
+    flex-direction: column;
+    .panel {
+      margin-right: 1.25rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .panel--primary {
+      width: 90%;
+    }
+  }
+}
+
+.panel {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0px 0px 120px 0px rgba(97, 108, 206, 0.08);
+  padding: 1.35rem;
+  height: min-content;
+
+  &--secondary {
+    width: 348px;
+    box-sizing: border-box;
+  }
+
+  &--primary {
+    width: calc(100% - 305px);
+  }
+
+  &__title {
+    font-weight: 500;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .panel__title {
+      flex: 1 1 100%;
+    }
+  }
+
+  &__separator {
+    height: 1px;
+    border: none;
+    background-color: #e8dddc;
+    margin: 1.5rem 0;
+  }
+
+  &__footer {
+  }
+}
+
+.card {
+  background-color: #62a7ff;
+  height: 10rem;
+  width: 100%;
+  position: relative;
+  border-radius: 0.25rem;
+  box-shadow: 0px 13px 30px 0px rgba(72, 117, 174, 0.25);
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+
+  &__background {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    &::before {
+      content: 'visa';
+      text-transform: uppercase;
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 0;
+      font-size: 5rem;
+      font-weight: bold;
+      letter-spacing: 0.8rem;
+      opacity: 0.08;
+      color: white;
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    top: 0.65rem;
+    left: 1rem;
+    background-color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  &__number {
+    flex: 0.85;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    text-align: left;
+    margin: 0;
+    padding: 0rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 10;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    margin-top: 1rem;
+    opacity: 0.7;
+    z-index: 10;
+  }
+
+  &__expiry {
+    margin: 0;
+    color: white;
+  }
+
+  &__name {
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+  }
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+
+  .card-info__row:not(:last-child) {
+    margin-bottom: 0.6rem;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.8rem;
+
+    .title {
+      font-weight: 500;
+      color: #b1b5b8;
+      width: 50%;
+      &::after {
+        content: ':';
+      }
+    }
+
+    .value {
+      text-align: right;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+select.dropdown {
+  font-family: Poppins -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  border: none;
+}
+
+#statistics_year {
+  margin-right: 0.5rem;
+}
+
+.statisics-chart {
+  margin-top: 1.5rem;
+}
